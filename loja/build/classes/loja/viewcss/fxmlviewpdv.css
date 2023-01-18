@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color: #212121;
+}
+.AnchorPane{
+    -fx-background-color: #00695c;
+}
+.table-column{
+    -fx-text-alignment: center;
+}
+
+
+.button{
+    -fx-background-color: #212121;
+    -fx-text-alignment: center;
+    -fx-border-color: beige;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}
+
+

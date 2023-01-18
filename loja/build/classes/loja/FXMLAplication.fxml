@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox id="edtsenha" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.FXMLAplicationController">
+   <children>
+      <Label alignment="CENTER" prefHeight="57.0" prefWidth="600.0" text="Acesso ao Sistema">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField id="edtlogin" maxWidth="400.0" prefHeight="34.0" prefWidth="400.0" promptText="Login:">
+         <VBox.margin>
+            <Insets left="50.0" top="100.0" />
+         </VBox.margin>
+      </TextField>
+      <PasswordField maxWidth="400.0" prefHeight="39.0" prefWidth="400.0" promptText="Senha:">
+         <VBox.margin>
+            <Insets left="50.0" top="50.0" />
+         </VBox.margin>
+      </PasswordField>
+      <HBox maxWidth="400.0" prefHeight="45.0" prefWidth="400.0">
+         <VBox.margin>
+            <Insets left="50.0" top="75.0" />
+         </VBox.margin>
+         <children>
+            <Button id="btnEntrar" maxWidth="280.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="280.0" text="Entrar">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="btnSair" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" text="Sair">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
