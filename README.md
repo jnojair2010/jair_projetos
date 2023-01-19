@@ -6,5 +6,5 @@ loja-------------> Aplicação de ERP, desenvolvido com java. peimeiro projeto p
 
 Android----------> Nestas aplição são modelos nativos do android que serve como ferramentas já prontas:
 
-	Dialog
+	Dialog simple com android projeto de nome (DialogSimples)
 	
