@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tituLologin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#006064"
+        android:paddingTop="15dp"
+        android:text="Login:"
+        android:textAlignment="center"
+        android:textColor="#eeeeee"
+        android:textSize="25dp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/edtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/tituLologin"
+        android:layout_marginTop="12dp">
+
+    </EditText>
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/edtLogin"
+        android:layout_marginTop="12dp"
+        android:inputType="textPassword"
+        >
+
+    </EditText>
+
+
+</RelativeLayout>
