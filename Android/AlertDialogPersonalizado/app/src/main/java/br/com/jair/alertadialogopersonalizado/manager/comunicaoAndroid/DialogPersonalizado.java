@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
@@ -47,6 +48,7 @@ public class DialogPersonalizado extends AlertDialog {
                 String login = editTextLogin.getText().toString();
                 String senha = editTextSenha.getText().toString();
                 Log.i("info", "***************************** login: "+login+" e a senha é: "+senha);
+                setToast("o login foi: "+login+"\n a senha foi: "+senha);
 
             }
         });
@@ -62,4 +64,11 @@ public class DialogPersonalizado extends AlertDialog {
 
 
     }
+
+    private void setToast(String msg){
+        Toast toast = Toast.makeText(getContext(),msg,Toast.LENGTH_LONG);
+        toast.show();
+
+    }
+
 }
