@@ -31,6 +31,36 @@ public class DialogPersonalizado extends AlertDialog {
         super(context, themeResId);
     }
 
+    public void getMDialogSimples(){
+        Log.i(" Dialog","***************************** getMDialogSimples()");
+
+        AlertDialog.Builder mDialog = new AlertDialog.Builder(getContext());  // esta o this na build do dialog é fundamento para não promover erros
+        mDialog.setTitle("Dialogo Alertado");
+        mDialog.setMessage("Dialog");
+        mDialog.setCancelable(false);
+        mDialog.setPositiveButton("CONFIRMAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                setToast("Você clicou em Confirmar");
+            }
+        });
+        mDialog.setNegativeButton("NEGAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                setToast("Você clicou em Negar");
+            }
+
+        });
+        mDialog.setNeutralButton("Canecar", new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                setToast("Você clicou cancelar \n optou por Neutralizade");
+            }
+        });
+        mDialog.create();
+        mDialog.show();
+    }
+
     public void getDialogPersonalizado(){
 
 

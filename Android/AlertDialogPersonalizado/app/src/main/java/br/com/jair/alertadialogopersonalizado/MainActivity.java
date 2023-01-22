@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Funcionario funcionario = new Funcionario();
 
-    private Button btnAlert;
+    private Button btnAlert, btnAlertSimples;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +23,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         DialogPersonalizado dialog = new DialogPersonalizado(this);
+        btnAlert = (Button) findViewById(R.id.btnAlert);
+        btnAlertSimples = (Button) findViewById(R.id.btnDialogSimples);
 
+        btnAlertSimples.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.getMDialogSimples();
+            }
+        });
 
-            btnAlert = (Button) findViewById(R.id.btnAlert);
-            btnAlert.setOnClickListener(new View.OnClickListener() {
+        btnAlert.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     dialog.getDialogPersonalizado();
                 }
-            });
+        });
 
 
     }
+
 
 
 
