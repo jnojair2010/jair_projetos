@@ -1,10 +1,4 @@
-# meu-projeto-pdv
+# Projetos que contem meu desenvolvimento pessoal com programação
 
-Todos os projeto neste GirHub são apresentado o meu desenvolvimento pessoal.
-
-loja-------------> Aplicação de ERP, desenvolvido com java. peimeiro projeto pessoal.
-
-Android----------> Nestas aplição são modelos nativos do android que serve como ferramentas já prontas:
-
-	Dialog simple com android projeto de nome (DialogSimples)
+estes 
 	
