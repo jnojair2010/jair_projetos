@@ -86,6 +86,14 @@ public class DialogPersonalizado extends AlertDialog {
 
     public void getDialogPersonalizado(){
 
+        TextView title = new TextView(getContext());
+        title.setText("Dialog com Imputs");
+        title.setTextColor(Color.WHITE);
+        title.setGravity(Gravity.CENTER);
+        title.setTextSize(20);
+        title.setHeight(150);
+        title.setBackgroundColor(Color.rgb(47,79,79));
+
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
 
@@ -94,6 +102,7 @@ public class DialogPersonalizado extends AlertDialog {
         dialog.setView(layoutCustomizado);
         EditText editTextLogin = (EditText) layoutCustomizado.findViewById(R.id.edtLogin);
         EditText editTextSenha = (EditText) layoutCustomizado.findViewById(R.id.edtSenha);
+        dialog.setCustomTitle(title);
         dialog.setPositiveButton("LOGAR", new OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -117,17 +126,19 @@ public class DialogPersonalizado extends AlertDialog {
 
     public void getAlertListaSimples(){
         TextView title = new TextView(getContext());
-        title.setText("Alerta Simples");
+        title.setText("Dialog Lista Selecao");
         title.setTextColor(Color.WHITE);
         title.setGravity(Gravity.CENTER);
         title.setTextSize(20);
         title.setHeight(150);
-
         title.setBackgroundColor(Color.rgb(47,79,79));
-        AlertDialog.Builder listaSimples = new AlertDialog.Builder(getContext());
-        listaSimples.setCustomTitle(title);
+
+
+
+        AlertDialog.Builder mDialog = new AlertDialog.Builder(getContext());
+        mDialog.setCustomTitle(title);
         String[] produtos = { "Base Ruby Rose", "Corretivo", "Base MissRose", "Base Belle Angel", "Pó Compacto Ruby Rose"};
-        listaSimples.setItems(produtos, new DialogInterface.OnClickListener() {
+        mDialog.setItems(produtos, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 switch (i){
@@ -152,7 +163,7 @@ public class DialogPersonalizado extends AlertDialog {
 
         });
 
-        AlertDialog dialog = listaSimples.create();
+        AlertDialog dialog = mDialog.create();
         dialog.show();
 
     }
@@ -182,14 +193,15 @@ public class DialogPersonalizado extends AlertDialog {
     }
 
     public void getAlestLista(){
-
         TextView title = new TextView(getContext());
-        title.setText("Alerta Simples");
+        title.setText("Alerta Recyclerview Lista\"");
         title.setTextColor(Color.WHITE);
         title.setGravity(Gravity.CENTER);
         title.setTextSize(20);
         title.setHeight(150);
         title.setBackgroundColor(Color.rgb(47,79,79));
+
+
 
         List<Produtos> listaProdutos = new ArrayList<Produtos>();
         listaProdutos = this.mManagerProdutos.getListaProdutos();
@@ -221,9 +233,6 @@ public class DialogPersonalizado extends AlertDialog {
         dialog.show();
 
     }
-
-
-
 
     private void setToast(String msg){
         Toast toast = Toast.makeText(getContext(),msg,Toast.LENGTH_LONG);

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <!--TextView
         android:id="@+id/tituLologin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -13,7 +13,7 @@
         android:textAlignment="center"
         android:textColor="#eeeeee"
         android:textSize="25dp"
-        android:textStyle="bold"></TextView>
+        android:textStyle="bold"></TextView-->
 
     <EditText
         android:id="@+id/edtLogin"
@@ -21,7 +21,6 @@
         android:layout_height="45dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_below="@+id/tituLologin"
         android:hint="Login:"
         android:layout_marginTop="12dp">
 
