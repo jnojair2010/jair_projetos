@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Funcionario funcionario = new Funcionario();
 
-    private Button btnAlert, btnAlertSimples;
+    Button btnAlert, btnAlertSimples, btnListaAlertDialog, listaCustomizado;
 
 
     @Override
@@ -25,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
         DialogPersonalizado dialog = new DialogPersonalizado(this);
         btnAlert = (Button) findViewById(R.id.btnAlert);
         btnAlertSimples = (Button) findViewById(R.id.btnDialogSimples);
+        btnListaAlertDialog= (Button) findViewById(R.id.btnLista);
+        listaCustomizado = (Button) findViewById(R.id.btnListaCustomizada);
+
+        listaCustomizado.setOnClickListener(e->{
+            dialog.getAlestLista();
+        });
+
+        btnListaAlertDialog.setOnClickListener(e->{
+            dialog.getAlertListaSimples();
+        });
 
         btnAlertSimples.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private static class ViewHolder{
+
+
+    }
 
 
 
